@@ -1,5 +1,6 @@
 # Ex.05 Book Front Cover Page Design
 # Date:15-12-2025
+
 # AIM:
 To design a book front cover page using HTML and CSS.
 
@@ -103,7 +104,6 @@ book.html
       font-family: 'Courier New', Courier, monospace;
       font-size: xx-large;
       margin: 10px auto;
-
 
     }
     .border{
