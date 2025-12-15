@@ -1,4 +1,4 @@
-# Ex.06 Book Front Cover Page Design
+# Ex.05 Book Front Cover Page Design
 # Date:15-12-2025
 # AIM:
 To design a book front cover page using HTML and CSS.
@@ -69,6 +69,7 @@ book.html
     .top{
       position: absolute;
       top: 60px;
+      left:10px;
       width: 45%;
       border: 50px;
       border-top: 1px solid #ff6200;
@@ -91,13 +92,13 @@ book.html
       border: 0;
       border-top: 1px solid #ff4000;
       margin:0 0 10px 300px;
-      right: 5PX ;
+      right: 10PX ;
 
     }
     .author{
       position: absolute;
       bottom: 4px;
-      left: 10px;
+      left: 20px;
       color: #000000;
       font-family: 'Courier New', Courier, monospace;
       font-size: xx-large;
@@ -105,20 +106,25 @@ book.html
 
 
     }
+    .border{
+      position:absolute;
+      bottom:10px;
+      top:30px;
+      right:10px;
+      left:10px;
+      border:5px solid yellow
+    }
     
   </style>
 </head>
 <body>
-
-
-
   <div class="book-container">
-    
-    <span class="edition"><strong>LIMITED EDITION</strong></span>
-    <span class="'middle"><strong>FATHER OF INDIAN CONSTITUION</strong></span>
+    <div class="border"></div>
+    <div class="edition">LIMITED EDITION</div>
+    <div class="'middle">FATHER OF INDIAN CONSTITUION</div>
     <hr class="top">
     <hr class="bottom">
-    <span class="author">ABINAV | 2023</span>
+    <div class="author">ABINAV | 2023</div>
     <img src="{% static 'bookcover.jpeg' %}" alt="Book Cover" class="book-cover">
 
     
@@ -150,7 +156,9 @@ urlpatterns = [
     path('book/', views.bookcover, name='bookcover')
 ]
 ```
+
 # OUTPUT:
-![alt text](<Screenshot 2025-12-15 093028.png>)
+![alt text](<Screenshot 2025-12-15 135948.png>)
+
 # RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.
