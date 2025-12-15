@@ -1,5 +1,5 @@
 # Ex.06 Book Front Cover Page Design
-# Date:
+# Date:15-12-2025
 # AIM:
 To design a book front cover page using HTML and CSS.
 
@@ -29,6 +29,128 @@ Insert the images in their appropriate places.
 Publish the website in the LocalHost.
 
 # PROGRAM:
+```
+book.html
+
+{% load static %}
+<html>
+<head>
+  <title>Book Cover</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    .book-container {
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+
+    .book-cover {
+      height: 700px;
+      width: 500px;
+      display: block;
+    }
+
+    .author-image {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      width: 80px;
+      height: 80px;
+      border: 1px solid black;
+      box-shadow: 0 0 8px rgba(0,0,0,0.5);
+      border-radius: 50px;
+    }
+
+    .top{
+      position: absolute;
+      top: 60px;
+      width: 45%;
+      border: 50px;
+      border-top: 1px solid #ff6200;
+      margin: 10px auto;
+    }
+    .edition{
+      position: absolute;
+      top: 35px;
+      color: #0022ff;
+      font-family: sans-serif;
+      font-size: x-large;
+      left: 30px;
+      margin: 10px auto;
+
+    }
+    .bottom{
+      position: absolute;
+      bottom: 100px;
+      width: 50%;
+      border: 0;
+      border-top: 1px solid #ff4000;
+      margin:0 0 10px 300px;
+      right: 5PX ;
+
+    }
+    .author{
+      position: absolute;
+      bottom: 4px;
+      left: 10px;
+      color: #000000;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: xx-large;
+      margin: 10px auto;
+
+
+    }
+    
+  </style>
+</head>
+<body>
+
+
+
+  <div class="book-container">
+    
+    <span class="edition"><strong>LIMITED EDITION</strong></span>
+    <span class="'middle"><strong>FATHER OF INDIAN CONSTITUION</strong></span>
+    <hr class="top">
+    <hr class="bottom">
+    <span class="author">ABINAV | 2023</span>
+    <img src="{% static 'bookcover.jpeg' %}" alt="Book Cover" class="book-cover">
+
+    
+    <img src="{% static 'author.jpeg' %}" 
+    alt="Author" class="author-image">
+</div>
+
+
+</body>
+</html>
+```
+```
+views.py
+
+from django.shortcuts import render
+
+def bookcover(request):
+    return render(request, "book.html")
+```
+```
+urls.py
+
+from django.contrib import admin
+from django.urls import path
+from book import views 
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('book/', views.bookcover, name='bookcover')
+]
+```
 # OUTPUT:
+![alt text](<Screenshot 2025-12-15 093028.png>)
 # RESULT:
 The program for designing book front cover page using HTML and CSS is completed successfully.
