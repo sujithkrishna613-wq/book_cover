@@ -76,6 +76,7 @@ book.html
       border-top: 1px solid #ff6200;
       margin: 10px auto;
     }
+
     .edition{
       position: absolute;
       top: 35px;
@@ -126,8 +127,6 @@ book.html
     <hr class="bottom">
     <div class="author">ABINAV | 2023</div>
     <img src="{% static 'bookcover.jpeg' %}" alt="Book Cover" class="book-cover">
-
-    
     <img src="{% static 'author.jpeg' %}" 
     alt="Author" class="author-image">
 </div>
