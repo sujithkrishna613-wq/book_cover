@@ -1,5 +1,5 @@
 # Ex.05 Book Front Cover Page Design
-# Date:15-12-2025
+# Date:16-12-2025
 
 # AIM:
 To design a book front cover page using HTML and CSS.
@@ -130,11 +130,10 @@ book.html
     <img src="{% static 'author.jpeg' %}" 
     alt="Author" class="author-image">
 </div>
-
-
 </body>
 </html>
 ```
+
 ```
 views.py
 
@@ -143,6 +142,7 @@ from django.shortcuts import render
 def bookcover(request):
     return render(request, "book.html")
 ```
+
 ```
 urls.py
 
